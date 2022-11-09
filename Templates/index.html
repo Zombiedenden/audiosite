@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock title %}
+{% block content %}
+  <!--- Image Slider -->
+  <div id="slides" class="carousel slide">
+    <ol class="carousel-indicators">
+      <li data-target="#slides" data-slide-to="0" class="active"></li>
+      <li data-target="#slides" data-slide-to="1"></li>
+      <li data-target="#slides" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-interval="false">
+        <img src="{{ url_for('static', filename='images/minecraft1.png') }}" alt="first slide">
+        <div class="carousel-caption">
+          <h1 class="display-2">Minecraft</h1>
+          <h3>The slacker edition</h3>
+          <button type="button" class="btn btn-outline-light btn-lg">Slacker Server</button>
+          <button type="button" class="btn btn-primary btn-lg">Portal Calculator</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/minecraft2.jpg') }}" alt="second slide">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/minecraft3.jpg') }}" alt="third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#slides" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#slides" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+    <!--- Jumbotron -->
+    <div class="container-fluid">
+      <div class="row jumbotron">
+          <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+              <p class="lead">Minecraft Wiki is an excellent place to brush up on all your minecraft knowledge. Click through to the minecraft Wiki.</p>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+              <a href="https://minecraft.fandom.com/wiki/Minecraft_Wiki">
+                  <button type="button" class="btn btn-outline-secondary btn-lg">Minecraft Wiki</button>
+              </a>
+          </div>
+      </div>
+  </div>
+
+    <!--- Welcome Section -->
+    <div class="contained-fluid padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h1 class="display-4">Minecraft Resources</h1>
+            </div>
+            <hr>
+            <div class="col-12">
+                <p class="lead">Below are three minecraft resources i recommended you check out
+                </p>
+            </div>
+            <hr>
+        </div>
+    </div>
+
+        <!--- Cards -->
+        <div class="container-fluid padding">
+            <div class="row padding">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="{{ url_for('static', filename='images/seedmap.png') }}"
+                            alt="chunkbase image">
+                        <div class="card-body">
+                            <h4 class="card-title">Chunkbase Seedmap</h4>
+                            <p class="card-text">A utility for discovering your world using your seed</p>
+                            <a href="https://www.chunkbase.com/apps/seed-map#-6839857702087732048" class="btn btn-outline-secondary">To Chunkbase</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="{{ url_for('static', filename='images/ilmango.png') }}"
+                            alt="ilmango image">
+                        <div class="card-body">
+                            <h4 class="card-title">Ilmango's Youtube</h4>
+                            <p class="card-text">Excellent tutorials and gameplay videos</p>
+                            <a href="https://www.youtube.com/c/ilmango" class="btn btn-outline-secondary">To Ilmango</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="{{ url_for('static', filename='images/redstone_circuits.png') }}"
+                            alt="redstone image">
+                        <div class="card-body">
+                            <h4 class="card-title">Redstone Circuits</h4>
+                            <p class="card-text">Advanced redstone circuits and how to create them.</p>
+                            <a href="https://minecraft.fandom.com/wiki/Tutorials/Advanced_redstone_circuits" class="btn btn-outline-secondary">To the Wiki</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock content %}
